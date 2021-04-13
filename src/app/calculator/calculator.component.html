@@ -1,0 +1,18 @@
+<div style="background-color: blueviolet;position: absolute;
+left: 30%;width: 20%;height: 600px;
+color: white;padding: 50px;">
+<div *ngIf="value1=='' && opr==''">value1:<input type="text" value="{{value1}}"></div>
+
+<div *ngIf="value1!='' && opr==''">opr:<input type="text" value="{{opr}}"></div>
+<div *ngIf="value1!='' && opr!='' && eqop!='='" >value2:<input type="text" value="{{value2}}"></div> 
+<!-- <button (click)="display()">+</button><br><br> -->
+<div *ngIf="eqop=='='">Result:<input type="text" value="{{result}}"></div> 
+{{value1}}{{opr}}{{value2}}
+={{result}}
+<br><br>
+<button class="btn btn-primary" *ngFor="let num of [0,1,2,3,4]" (click)="setValue(num)">{{num}}</button><br><br>
+<button class="btn btn-success" *ngFor="let num of [5,6,7,8,9]" (click)="setValue(num)">{{num}}</button><br><br>
+<button class="btn btn-warning" *ngFor="let opr of ['+','-','*','/','clr']" (click)="setOpr(opr)"  >{{opr}}</button>
+<button class="btn btn-danger" (click)="display('=')">=</button>
+
+</div>
