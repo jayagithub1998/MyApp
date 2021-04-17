@@ -17,12 +17,12 @@ export class CalculatorComponent implements OnInit {
   }
   
 
-  getData1($event:any){
-    this.value1=$event.target.value
-  }
-  getData2($event:any){
-    this.value2=$event.target.value
-  }
+  // getData1($event:any){
+  //   this.value1=$event.target.value
+  // }
+  // getData2($event:any){
+  //   this.value2=$event.target.value
+  // }
   display(eq:any){
     this.eqop=eq
     if(this.opr=='+'){
@@ -46,11 +46,11 @@ export class CalculatorComponent implements OnInit {
   
   setValue(num:any){
     
-    if(this.value1=="" && this.opr==""){
-      this.value1=num
+    if(this.opr=="" ){
+     this.value1=this.value1.concat(num)
     }
     else if(this.opr!=""){
-      this.value2=num
+      this.value2=this.value2.concat(num)
     }
     else{
       alert("invalid entry")
@@ -68,7 +68,7 @@ export class CalculatorComponent implements OnInit {
       this.opr=""
   }
   else{
-    alert("invalid entry")
+    alert("invalid operator")
   }
   }
 

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faThumbsUp,faAddressBook,faBell} from '@fortawesome/free-solid-svg-icons'
+
 
 @Component({
   selector: 'app-root',
@@ -6,6 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  bell:any=faBell
+  address:any=faAddressBook
+  thumbs:any=faThumbsUp
+  mycolor:any
   // title = 'PRIYA';
   // myarray=["hi","hello","how","are","you","priya"]
   // condition:boolean=true
@@ -24,7 +30,11 @@ export class AppComponent {
   getData1(){
     console.log("input event triggered...")
   }
-  
+  setColor(event:any){
+    this.mycolor=event.target.value;
+  }
+  mystyle:any={'color':'orange','font-size':"40px"}
+  condition:any=true
 
 }
 

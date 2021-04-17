@@ -4,8 +4,8 @@ color: white;padding: 60px;margin-top: 10px;">
 <div *ngIf="opr==''&& value2=='' ">value1:<br><input type="text" value="{{value1}}"></div>
 
 <div *ngIf="value1!='' && value2=='' && opr!=''">opr:<br><input type="text" value="{{opr}}"></div>
-<div *ngIf="value1!='' && opr!='' && value2!='' && result==0 " >value2:<br><input type="text" value="{{value2}}"></div> 
-<!-- <button (click)="display()">+</button><br><br> -->
+<div *ngIf="value1!='' && opr!='' && value2!='' && result==0 " >value2:<br><input type="text" value="{{value2}}"></div>  
+
 <div *ngIf="eqop=='=' && value1!='' && value2!='' && opr!='' && result!=0 ">Result:<br><input type="text" value="{{result}}"></div> 
 {{value1}}{{opr}}{{value2}}
 ={{result}}
@@ -16,3 +16,21 @@ color: white;padding: 60px;margin-top: 10px;">
 <button class="btn btn-danger" (click)="display('=')">=</button>
 
 </div>
+<!-- <div style="background-color: blueviolet;position: absolute;
+left: 30%;width: 21%; height: 400px;
+color: white;padding: 60px;margin-top: 10px;">
+<div *ngIf="opr==''&& value2=='' ">value1:<br><input *ngFor="opr==''" type="text" value="{{value1}}"></div>
+<div *ngIf="value2=='' && opr!=''">opr:<br><input type="text" value="{{opr}}"></div>
+<div *ngIf="value1!='' && opr!='' && value2!='' && result==0 " >value2:<br><input type="text" value="{{value2}}"></div> 
+
+<div *ngIf="eqop=='=' && value1!='' && value2!='' && opr!='' && result!=0 ">Result:<br><input type="text" value="{{result}}"></div> 
+{{value1}}{{opr}}{{value2}}
+={{result}}
+<br><br>
+<button class="btn btn-primary" *ngFor="let num of [0,1,2,3,4]" (click)="setValue(num)">{{num}}</button><br><br>
+<button class="btn btn-success" *ngFor="let num of [5,6,7,8,9]" (click)="setValue(num)">{{num}}</button><br><br>
+<button class="btn btn-warning" *ngFor="let opr of ['+','-','*','/','clr']" (click)="setOpr(opr)"  >{{opr}}</button>
+<button class="btn btn-danger" (click)="display('=')">=</button>
+ -->
+
+
