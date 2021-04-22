@@ -1,5 +1,5 @@
-<form [formGroup]="myform">
-    <div class="form-group">
+<form [formGroup]="myform" (ngSubmit)="save()">
+    <div class="form-group">    <!--class is used to get bootstrap form class-->
         <label for="">First Name</label>
     </div>
     <div>
@@ -22,7 +22,28 @@
     </div>
     <div>
         <input type="password" class="form-control" formControlName="password" name="password">
-    </div><br>
+    </div>
+    <div formGroupName="address" >
+        <div  class="form-group">
+            <label for="">houseno</label>
+        </div>
+        <div>
+            <input type="text" formControlName="houseno" name="houseno" class="form-control">
+        </div>
+        <div  class="form-group">
+            <label for="">city</label>
+        </div>
+        <div>
+            <input type="text" formControlName="city" name="city" class="form-control">
+        </div>
+        <div  class="form-group">
+            <label for="">district</label>
+        </div>
+        <div>
+            <input type="text" formControlName="dist" name="dist" class="form-control">
+        </div>
+    </div>
+    <br>
     <button  class="btn btn-primary">save</button>
 </form>
 

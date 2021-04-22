@@ -1,0 +1,20 @@
+<form [formGroup]="productForm">
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" formControlName="pid" placeholder="Product id">
+        </div>
+       <div class="col">
+            <input type="text" class="form-control" formControlName="name" placeholder="Product name">
+        </div>
+    </div><br>
+    <div class="row">
+        <input type="text" class="form-control" formControlName="price" placeholder="Price">
+    </div><br>
+    <div class="row">
+        <textarea class="form-control" formControlName="des" placeholder="Description"></textarea>
+    </div><br>
+    <div>
+        <input type="submit" value="add" class="btn btn-primary">
+    </div>
+    
+</form>

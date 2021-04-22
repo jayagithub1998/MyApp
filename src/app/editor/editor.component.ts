@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl,FormGroup} from '@angular/forms';
+import { DateService } from '../date.service';
 
 
 @Component({
@@ -9,14 +10,24 @@ import { FormControl,FormGroup} from '@angular/forms';
 })
 export class EditorComponent implements OnInit {
   myform=new FormGroup({
-    fname:new FormControl('Chippy'),
-    lname:new FormControl('Chippy'),
-    email:new FormControl('Chippy'),
-    password:new FormControl('Chippy')
+    fname:new FormControl(''),
+    lname:new FormControl(''),
+    email:new FormControl(''),
+    password:new FormControl(''),
+    address:new FormGroup({
+      houseno:new FormControl(''),
+      city:new FormControl(''),
+      dist:new FormControl('')
+    })
     
   })
+  save(){
+    console.log(this.myform.value)
+  }
   
-  constructor() { }
+  constructor(private obj:DateService) {
+    console.log("editor component instantiated",obj.getTime_Date())
+   }
 
   ngOnInit(): void {
   }

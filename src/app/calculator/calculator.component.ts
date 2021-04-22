@@ -49,7 +49,7 @@ export class CalculatorComponent implements OnInit {
     if(this.opr=="" ){
      this.value1=this.value1.concat(num)
     }
-    else if(this.opr!=""){
+    else if(this.opr!="" && this.eqop!="="){
       this.value2=this.value2.concat(num)
     }
     else{
@@ -66,6 +66,7 @@ export class CalculatorComponent implements OnInit {
       this.value1=""
       this.value2=""
       this.opr=""
+      this.eqop=""
   }
   else{
     alert("invalid operator")

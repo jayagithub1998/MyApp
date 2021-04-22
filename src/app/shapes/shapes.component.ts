@@ -6,7 +6,7 @@ import {Interface} from '../interface';
   templateUrl: './shapes.component.html',
   styleUrls: ['./shapes.component.css']
 })
-class ShapesComponent implements OnInit {
+export class ShapesComponent implements OnInit {
  
   constructor() { 
 
